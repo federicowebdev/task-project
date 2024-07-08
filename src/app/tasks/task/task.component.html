@@ -1,0 +1,20 @@
+<div class="c-task" #taskRef [class]="statusOption()">
+  <div class="title">
+    {{ task().title }}
+  </div>
+  <div class="summary">
+    {{ task().summary }}
+  </div>
+  <div class="info-wrapper">
+    <div class="date">
+      {{ task().dueDate | date : 'medium' }}
+    </div>
+    <div class="status">
+      <select name="status" id="status" [value]="statusOption()" #status (change)="onChange()">
+        <option value="open">Open</option>
+        <option value="in-progress">In Progress</option>
+        <option value="completed">Completed</option>
+      </select>
+    </div>
+  </div>
+</div>

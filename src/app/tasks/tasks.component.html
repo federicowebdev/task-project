@@ -1,0 +1,23 @@
+<div class="c-tasks">
+  <div class="header">
+    <h3>{{ userName }} 's Tasks</h3>
+    <button class="c-button" routerLink="new">Add New Task</button>
+  </div>
+
+  @if (isFetching()) {
+  <div class="loader-wrapper">
+    <span class="loader"></span>
+  </div>
+
+  } @else { @if (tasks().length) {
+  <ul>
+    @for (task of tasks(); track task.id) {
+    <li>
+      <app-task [task]="task" (onSelect)="getUserTasks()" />
+    </li>
+    }
+  </ul>
+  } @else {
+  <p class="warning-message">No Tasks Found for this user!</p>
+  } }
+</div>

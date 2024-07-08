@@ -1,0 +1,36 @@
+<div class="c-new-task">
+  <div class="overlay"></div>
+  <div class="inner-wrapper">
+    <div class="close-button">
+      <button
+        class="btn btn-secondary rounded-circle p-3 lh-1"
+        type="button"
+        [routerLink]="['../']"
+        (click)="onClear()"
+      >
+        <i class="bi bi-x-lg"></i>
+        <span class="visually-hidden">Dismiss</span>
+      </button>
+    </div>
+
+    <form [formGroup]="form" (ngSubmit)="onSubmit()" class="row">
+      <div class="col-sm-12 p-0 mb-4">
+        <label for="title" class="form-label">Add Task Title</label>
+        <input type="text" class="form-control" id="title" formControlName="title" />
+        @if (titleIsInvalid) {
+        <p class="error-message mt-2">Please add a title for the task.</p>
+        }
+      </div>
+
+      <div class="col-sm-12 p-0 mb-5">
+        <label for="summary" class="form-label">Add Task Summary</label>
+        <input type="text" class="form-control" id="summary" formControlName="summary" />
+        @if (summaryIsInvalid) {
+        <p class="error-message mt-2">Please add a Summary for the task.</p>
+        }
+      </div>
+
+      <button type="submit" class="c-button">Add new task</button>
+    </form>
+  </div>
+</div>

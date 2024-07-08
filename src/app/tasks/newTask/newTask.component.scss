@@ -1,0 +1,47 @@
+@use "../../../scss/abstracts/" as *;
+
+.c-new-task {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9;
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba($black, 0.5);
+    }
+
+    .inner-wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 4rem 3rem;
+        border-radius: 15px;
+        background-color: $dark-grey-200;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.35rem;
+    }
+
+    input {
+        &.ng-invalid.ng-touched {
+            border: 2px solid red;
+        }
+    }
+
+    .error-message {
+        color: red;
+    }
+}

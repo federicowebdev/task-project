@@ -1,0 +1,7 @@
+@use "../abstracts/" as *;
+
+html,
+body {
+    background-color: $dark-grey-200;
+    padding: 0 0 4rem;
+}

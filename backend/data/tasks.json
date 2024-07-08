@@ -1,0 +1,74 @@
+[
+    {
+        "id": "t1",
+        "userId": "u2",
+        "title": "Master Angular",
+        "summary": "Learn all the basic and advanced features of Angular & how to apply them.",
+        "dueDate": "2024-12-31",
+        "status": "in-progress"
+    },
+    {
+        "id": "t2",
+        "userId": "u3",
+        "title": "Master React",
+        "summary": "Learn all the basic and advanced features of React.",
+        "dueDate": "2024-12-31",
+        "status": "in-progress"
+    },
+    {
+        "id": "t3",
+        "userId": "u2",
+        "title": "Master Vue 3",
+        "summary": "Learn all the basic and advanced features of Vue.",
+        "dueDate": "2024-12-31",
+        "status": "open"
+    },
+    {
+        "id": "t4",
+        "userId": "u1",
+        "title": "Master JS",
+        "summary": "Learn all the basic and advanced features of JS.",
+        "dueDate": "2024-12-31",
+        "status": "in-progress"
+    },
+    {
+        "id": "t5",
+        "userId": "u1",
+        "title": "Master HTML5",
+        "summary": "Learn all the basic and advanced features of HTML5.",
+        "dueDate": "2024-12-31",
+        "status": "in-progress"
+    },
+    {
+        "id": "t6",
+        "userId": "u2",
+        "title": "Master Nuxt 3",
+        "summary": "Learn all the basic and advanced features of Nuxt 3.",
+        "dueDate": "2024-12-31",
+        "status": "open"
+    },
+    {
+        "id": "t7",
+        "userId": "u3",
+        "title": "Master Node.js",
+        "summary": "Learn all the basic and advanced features of Node.js.",
+        "dueDate": "2024-12-31",
+        "status": "open"
+    },
+    {
+        "id": "u0.32814708249675695",
+        "userId": "u2",
+        "title": "asd",
+        "summary": "asd",
+        "status": "open",
+        "dueDate": "2024-07-08T06:58:57.161Z"
+    },
+    {
+        "id": "u0.07933007486646804",
+        "userId": "u1",
+        "title": "New Task",
+        "summary": "Angular v17+ Course",
+        "status": "open",
+        "dueDate": "2024-07-08T07:04:32.580Z"
+    }
+]

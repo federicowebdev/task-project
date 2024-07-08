@@ -1,0 +1,60 @@
+@use "../../scss/abstracts/" as *;
+
+.c-tasks {
+    padding: 1rem 1rem 0;
+    border-radius: 15px;
+    border: 0.08rem solid $black;
+    background: $dark-grey-201;
+    background: linear-gradient(180deg, $dark-grey-200 0%, $dark-grey-201 100%);
+
+    .header {
+        padding: 1rem 1rem 1.5rem;
+        display: flex;
+        align-items: start;
+        justify-content: space-between;
+        border-bottom: 1px solid $black;
+        border-radius: 15px;
+    }
+
+    ul {
+        padding: 2rem 0;
+        list-style: none;
+
+        li {
+            margin: 0 0 1rem;
+        }
+    }
+
+    .warning-message {
+        padding: 4rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .loader-wrapper {
+        position: relative;
+        min-height: 30vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .loader {
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 0.15rem solid rgba($white, 0.5);
+        border-bottom-color: transparent;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+    }
+
+    @keyframes rotation {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+}
