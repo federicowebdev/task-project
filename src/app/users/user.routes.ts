@@ -10,11 +10,14 @@ export const routes: Routes = [
   },
   {
     path: 'tasks',
-    component: TasksComponent,
+    loadComponent: () => import('../tasks/tasks.component').then((c) => c.TasksComponent),
+    // component: TasksComponent,
     runGuardsAndResolvers: 'always',
   },
   {
     path: 'tasks/new',
-    component: NewTaskComponent,
+    loadComponent: () =>
+      import('../tasks/newTask/newTask.component').then((c) => c.NewTaskComponent),
+    // component: NewTaskComponent,
   },
 ];

@@ -1,13 +1,15 @@
 import { Routes } from '@angular/router';
 
-import { DashboardComponent } from './dashboard/dashboard.component';
+// import { DashboardComponent } from './dashboard/dashboard.component';
 import { routes as userRoutes } from './users/user.routes';
 
 export const routes: Routes = [
   {
     title: 'home',
     path: '',
-    component: DashboardComponent,
+    loadComponent: () =>
+      import('../app/dashboard/dashboard.component').then((c) => c.DashboardComponent),
+    // component: DashboardComponent,
   },
   {
     path: 'users/:userId',

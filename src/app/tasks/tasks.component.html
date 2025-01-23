@@ -9,9 +9,9 @@
     <span class="loader"></span>
   </div>
 
-  } @else { @if (tasks().length) {
+  } @else { @if (tasks.length) {
   <ul>
-    @for (task of tasks(); track task.id) {
+    @for (task of tasks; track task.id) {
     <li>
       <app-task [task]="task" (onSelect)="getUserTasks()" />
     </li>

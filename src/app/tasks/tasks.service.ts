@@ -1,6 +1,6 @@
 import { inject, Injectable, signal } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { catchError, map, tap, throwError } from 'rxjs';
+import { catchError, map, take, tap, throwError } from 'rxjs';
 
 import { Task } from './task/task.model';
 
@@ -25,7 +25,11 @@ export class TasksService {
           console.log(errorMessage);
           return new Error(errorMessage);
         })
-      )
+      ),
+      take(1),
+      tap((result) => {
+        this.tasks.set(result);
+      })
     );
   }
 
@@ -64,6 +68,7 @@ export class TasksService {
           console.log(error.message);
           return throwError(() => new Error(error));
         }),
+        take(1),
         tap({
           next: () => {
             if (this.tasks().some((t) => t.id !== task.id)) {
